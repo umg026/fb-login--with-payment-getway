@@ -20,7 +20,7 @@ const AuthGuard = ({ children }: { children: React.ReactNode }) => {
         }
 
         if (!isAuthenticated && !token && pathname !== "/auth/login") {
-            router.replace("/auth/login");
+            // router.replace("/auth/login");
             sessionStorage.clear();
         }
     }, [isAuthenticated, pathname, router, dispatch]);
