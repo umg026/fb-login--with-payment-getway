@@ -2,5 +2,6 @@ export const STATUS = {
     NOT_FOUND : 404,
     SUCCESS:200,
     CREATED:201,
-    SERVER_ERROR:500
+    SERVER_ERROR:500,
+    BAD_REQUEST:400
 }

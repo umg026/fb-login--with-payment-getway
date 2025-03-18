@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import MySql from './config/db.js';
 import { authRouter } from './routes/users.js';
 import cors from 'cors';
+import { subscriptionRouter } from './routes/subscription.js';
 dotenv.config();
 
 const app = express();
@@ -22,6 +23,8 @@ app.use(cors({
 app.use(express.static(path.join(process.cwd(), 'public')));
 
 app.use('/api/auth', authRouter)
+app.use('/api/v1/payment', subscriptionRouter)
+
 
 app.use('/*', (req, res) => {
   res.end('Happy Hacking!');
